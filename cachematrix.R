@@ -22,9 +22,9 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
         i <- x$getInverse()
         if (!is.null(i)){
-            message("getting cached inverse")
-            ## Return a matrix that is the inverse of 'x'
-            return(i)
+                message("getting cached inverse")
+                ## Return a matrix that is the inverse of 'x'
+                return(i)
         }
         i <- solve(x$get(), ...)
         x$setInverse(i)
